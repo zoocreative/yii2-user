@@ -11,13 +11,13 @@
 
 namespace dektrium\user\controllers;
 
-use dektrium\user\Finder;
-use dektrium\user\models\Account;
-use dektrium\user\models\LoginForm;
-use dektrium\user\models\User;
-use dektrium\user\Module;
-use dektrium\user\traits\AjaxValidationTrait;
-use dektrium\user\traits\EventTrait;
+use zoocreative\user\Finder;
+use zoocreative\user\models\Account;
+use zoocreative\user\models\LoginForm;
+use zoocreative\user\models\User;
+use zoocreative\user\Module;
+use zoocreative\user\traits\AjaxValidationTrait;
+use zoocreative\user\traits\EventTrait;
 use yii\authclient\AuthAction;
 use yii\authclient\ClientInterface;
 use yii\filters\AccessControl;

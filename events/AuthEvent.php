@@ -11,7 +11,7 @@
 
 namespace dektrium\user\events;
 
-use dektrium\user\models\Account;
+use zoocreative\user\models\Account;
 use yii\authclient\ClientInterface;
 use yii\base\Event;
 

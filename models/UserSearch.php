@@ -11,7 +11,7 @@
 
 namespace dektrium\user\models;
 
-use dektrium\user\Finder;
+use zoocreative\user\Finder;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;

@@ -11,8 +11,8 @@
 
 namespace dektrium\user;
 
-use dektrium\user\models\query\AccountQuery;
-use dektrium\user\models\Token;
+use zoocreative\user\models\query\AccountQuery;
+use zoocreative\user\models\Token;
 use yii\authclient\ClientInterface;
 use yii\base\BaseObject;
 use yii\db\ActiveQuery;

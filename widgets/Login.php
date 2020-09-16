@@ -11,7 +11,7 @@
 
 namespace dektrium\user\widgets;
 
-use dektrium\user\models\LoginForm;
+use zoocreative\user\models\LoginForm;
 use yii\base\Widget;
 
 /**

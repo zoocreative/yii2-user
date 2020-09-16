@@ -11,11 +11,11 @@
 
 namespace dektrium\user\controllers;
 
-use dektrium\user\Finder;
-use dektrium\user\models\RecoveryForm;
-use dektrium\user\models\Token;
-use dektrium\user\traits\AjaxValidationTrait;
-use dektrium\user\traits\EventTrait;
+use zoocreative\user\Finder;
+use zoocreative\user\models\RecoveryForm;
+use zoocreative\user\models\Token;
+use zoocreative\user\traits\AjaxValidationTrait;
+use zoocreative\user\traits\EventTrait;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

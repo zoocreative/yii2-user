@@ -11,8 +11,8 @@
 
 namespace dektrium\user;
 
-use dektrium\user\models\Token;
-use dektrium\user\models\User;
+use zoocreative\user\models\Token;
+use zoocreative\user\models\User;
 use Yii;
 use yii\base\Component;
 

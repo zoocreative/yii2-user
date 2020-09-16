@@ -11,9 +11,9 @@
 
 namespace dektrium\user\models;
 
-use dektrium\user\Finder;
-use dektrium\user\helpers\Password;
-use dektrium\user\traits\ModuleTrait;
+use zoocreative\user\Finder;
+use zoocreative\user\helpers\Password;
+use zoocreative\user\traits\ModuleTrait;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use Yii;

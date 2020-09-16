@@ -11,14 +11,14 @@
 
 namespace dektrium\user\controllers;
 
-use dektrium\user\filters\AccessRule;
-use dektrium\user\Finder;
-use dektrium\user\models\Profile;
-use dektrium\user\models\User;
-use dektrium\user\models\UserSearch;
-use dektrium\user\helpers\Password;
-use dektrium\user\Module;
-use dektrium\user\traits\EventTrait;
+use zoocreative\user\filters\AccessRule;
+use zoocreative\user\Finder;
+use zoocreative\user\models\Profile;
+use zoocreative\user\models\User;
+use zoocreative\user\models\UserSearch;
+use zoocreative\user\helpers\Password;
+use zoocreative\user\Module;
+use zoocreative\user\traits\EventTrait;
 use yii;
 use yii\base\ExitException;
 use yii\base\Model;

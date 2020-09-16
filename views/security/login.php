@@ -9,8 +9,8 @@
  * file that was distributed with this source code.
  */
 
-use dektrium\user\widgets\Connect;
-use dektrium\user\models\LoginForm;
+use zoocreative\user\widgets\Connect;
+use zoocreative\user\models\LoginForm;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

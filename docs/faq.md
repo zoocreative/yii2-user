@@ -33,7 +33,7 @@ You can use Login widget to achieve this:
 ```php
 <?php
 
-use dektrium\user\widgets\Login;
+use zoocreative\user\widgets\Login;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

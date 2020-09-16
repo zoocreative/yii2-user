@@ -11,8 +11,8 @@
 
 namespace dektrium\user\models;
 
-use dektrium\user\Finder;
-use dektrium\user\Mailer;
+use zoocreative\user\Finder;
+use zoocreative\user\Mailer;
 use yii\base\Model;
 
 /**

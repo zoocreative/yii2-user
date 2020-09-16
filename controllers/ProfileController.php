@@ -11,7 +11,7 @@
 
 namespace dektrium\user\controllers;
 
-use dektrium\user\Finder;
+use zoocreative\user\Finder;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

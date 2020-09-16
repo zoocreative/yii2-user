@@ -11,7 +11,7 @@
 
 namespace dektrium\user\commands;
 
-use dektrium\user\Finder;
+use zoocreative\user\Finder;
 use Yii;
 use yii\console\Controller;
 use yii\helpers\Console;

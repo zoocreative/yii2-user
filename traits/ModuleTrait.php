@@ -2,7 +2,7 @@
 
 namespace dektrium\user\traits;
 
-use dektrium\user\Module;
+use zoocreative\user\Module;
 
 /**
  * Trait ModuleTrait

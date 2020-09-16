@@ -11,8 +11,8 @@
 
 namespace dektrium\user\events;
 
-use dektrium\user\models\RecoveryForm;
-use dektrium\user\models\Token;
+use zoocreative\user\models\RecoveryForm;
+use zoocreative\user\models\Token;
 use yii\base\Event;
 
 /**

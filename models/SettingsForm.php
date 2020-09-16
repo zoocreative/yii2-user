@@ -11,10 +11,10 @@
 
 namespace dektrium\user\models;
 
-use dektrium\user\helpers\Password;
-use dektrium\user\Mailer;
-use dektrium\user\Module;
-use dektrium\user\traits\ModuleTrait;
+use zoocreative\user\helpers\Password;
+use zoocreative\user\Mailer;
+use zoocreative\user\Module;
+use zoocreative\user\traits\ModuleTrait;
 use Yii;
 use yii\base\Model;
 

@@ -11,17 +11,17 @@
 
 namespace dektrium\user\traits;
 
-use dektrium\user\events\AuthEvent;
-use dektrium\user\events\ConnectEvent;
-use dektrium\user\events\FormEvent;
-use dektrium\user\events\ProfileEvent;
-use dektrium\user\events\ResetPasswordEvent;
-use dektrium\user\events\UserEvent;
-use dektrium\user\models\Account;
-use dektrium\user\models\Profile;
-use dektrium\user\models\RecoveryForm;
-use dektrium\user\models\Token;
-use dektrium\user\models\User;
+use zoocreative\user\events\AuthEvent;
+use zoocreative\user\events\ConnectEvent;
+use zoocreative\user\events\FormEvent;
+use zoocreative\user\events\ProfileEvent;
+use zoocreative\user\events\ResetPasswordEvent;
+use zoocreative\user\events\UserEvent;
+use zoocreative\user\models\Account;
+use zoocreative\user\models\Profile;
+use zoocreative\user\models\RecoveryForm;
+use zoocreative\user\models\Token;
+use zoocreative\user\models\User;
 use yii\authclient\ClientInterface;
 use yii\base\Model;
 
