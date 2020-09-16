@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\events;
+namespace zoocreative\user\events;
 
 use zoocreative\user\models\Account;
 use yii\authclient\ClientInterface;

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\widgets;
+namespace zoocreative\user\widgets;
 
 use yii\widgets\Menu;
 use Yii;

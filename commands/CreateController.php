@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\commands;
+namespace zoocreative\user\commands;
 
 use zoocreative\user\models\User;
 use Yii;

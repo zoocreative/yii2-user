@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\controllers;
+namespace zoocreative\user\controllers;
 
 use zoocreative\user\Finder;
 use zoocreative\user\models\RecoveryForm;

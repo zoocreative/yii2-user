@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\traits;
+namespace zoocreative\user\traits;
 
 use zoocreative\user\events\AuthEvent;
 use zoocreative\user\events\ConnectEvent;

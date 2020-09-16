@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\models;
+namespace zoocreative\user\models;
 
 use zoocreative\user\helpers\Password;
 use zoocreative\user\Mailer;

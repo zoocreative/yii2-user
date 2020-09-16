@@ -1,6 +1,6 @@
 <?php
 
-namespace dektrium\user\traits;
+namespace zoocreative\user\traits;
 
 use zoocreative\user\Module;
 

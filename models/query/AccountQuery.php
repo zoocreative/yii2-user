@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\models\query;
+namespace zoocreative\user\models\query;
 
 use zoocreative\user\models\Account;
 use yii\authclient\ClientInterface;

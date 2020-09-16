@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\widgets;
+namespace zoocreative\user\widgets;
 
 use zoocreative\user\models\LoginForm;
 use yii\base\Widget;

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user;
+namespace zoocreative\user;
 
 use zoocreative\user\models\query\AccountQuery;
 use zoocreative\user\models\Token;
