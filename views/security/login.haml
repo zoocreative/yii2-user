@@ -1,0 +1,39 @@
+-use zoocreative\user\widgets\Connect;
+-use zoocreative\user\models\LoginForm;
+-use yii\helpers\Html;
+-use yii\widgets\ActiveForm;
+
+!=$view->render('/_alert', ['module' => Yii::$app->getModule('user')]);
+
+.grid-container
+    .grid-x
+        .auto.cell
+            -$form = ActiveForm::begin(['id' => 'login-form', 'enableAjaxValidation' => true, 'enableClientValidation' => false, 'validateOnBlur' => false, 'validateOnType' => false, 'validateOnChange' => false]);
+
+            -if ($module->debug)
+                !=$form->field($model, 'login', ['inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control', 'tabindex' => '1']])->dropDownList(LoginForm::loginList());
+            -else
+                !=$form->field($model, 'login', ['inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control', 'tabindex' => '1']]);
+
+            -if ($module->debug)
+                .alert.alert-warning
+                    != Yii::t('user', 'Password is not necessary because the module is in DEBUG mode.');
+            -else
+                !=$form->field($model,'password',['inputOptions' => ['class' => 'form-control', 'tabindex' => '2']])->passwordInput()->label(Yii::t('user', 'Password'))
+                !=($module->enablePasswordRecovery ? ' (' . Html::a(Yii::t('user', 'Forgot password?'),['/user/recovery/request'],['tabindex' => '5']). ')' : '')
+
+                !=$form->field($model, 'rememberMe')->checkbox(['tabindex' => '3'])
+
+                != Html::submitButton(Yii::t('user', 'Sign in'),['class' => 'button', 'tabindex' => '4'])
+
+                -ActiveForm::end();
+        .auto.cell
+            -if ($module->enableConfirmation)
+                %p.text-center
+                    != Html::a(Yii::t('user', 'Didn\'t receive confirmation message?'), ['/user/registration/resend'])
+            
+            -if ($module->enableRegistration)
+                %p.text-center
+                    != Html::a(Yii::t('user', 'Don\'t have an account? Sign up!'), ['/user/registration/register'])
+
+        != Connect::widget(['baseAuthUrl' => ['/user/security/auth'],])
