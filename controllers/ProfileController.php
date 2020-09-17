@@ -15,6 +15,7 @@ use zoocreative\user\Finder;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use app\models\Meta;
 
 /**
  * ProfileController shows users profiles.
@@ -74,13 +75,15 @@ class ProfileController extends Controller
      */
     public function actionShow($id)
     {
+        Meta::tags($this, "inner");
+
         $profile = $this->finder->findProfileById($id);
 
         if ($profile === null) {
             throw new NotFoundHttpException();
         }
 
-        return $this->render('show', [
+        return $this->render('show.haml', [
             'profile' => $profile,
         ]);
     }

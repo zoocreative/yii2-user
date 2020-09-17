@@ -1,0 +1,9 @@
+-use yii\helpers\Html;
+-use zoocreative\user\widgets\UserMenu;
+
+-$user = Yii::$app->user->identity;
+
+.callout.secondary
+    != Html::img($user->profile->getAvatarUrl(24), ['class' => 'img-rounded','alt' => $user->username,])
+    != $user->username
+    != UserMenu::widget()

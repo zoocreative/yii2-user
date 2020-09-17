@@ -1,0 +1,15 @@
+-use yii\helpers\Html;
+-use yii\widgets\ActiveForm;
+
+.grid-container
+    .grid-x.grid-margin-x
+        .callout.alert
+            %p
+                != Yii::t('user','In order to finish your registration, we need you to enter following fields')
+            -$form = ActiveForm::begin(['id' => 'connect-account-form']);
+            != $form->field($model, 'email')
+            != $form->field($model, 'username')
+            != Html::submitButton(Yii::t('user', 'Continue'), ['class' => 'btn btn-success btn-block'])
+            -ActiveForm::end();
+        %p(class="text-center")
+            != Html::a(Yii::t('user','If you already registered, sign in and connect this account on settings page'),['/user/settings/networks'])

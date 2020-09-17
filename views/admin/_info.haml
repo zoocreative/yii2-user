@@ -1,0 +1,38 @@
+-$view->beginContent('@zoocreative/user/views/admin/update.haml', ['user' => $user]) ?>
+
+%table
+    %tr
+        %td
+            %strong
+                != Yii::t('user', 'Registration time')
+        %td
+            != Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$user->created_at])
+    -if ($user->registration_ip !== null)
+        %tr
+            %td
+                %strong
+                    != Yii::t('user', 'Registration IP')
+            %td
+                != $user->registration_ip
+    %tr
+        %td
+            %strong
+                != Yii::t('user', 'Confirmation status') ?>
+        -if ($user->isConfirmed)
+            %td
+                != Yii::t('user', 'Confirmed at {0, date, MMMM dd, YYYY HH:mm}', [$user->confirmed_at])
+        -else
+            %td
+                != Yii::t('user', 'Unconfirmed')
+    %tr
+        %td
+            %strong
+                != Yii::t('user', 'Block status') ?>
+        -if ($user->isBlocked)
+            %td
+                != Yii::t('user', 'Blocked at {0, date, MMMM dd, YYYY HH:mm}', [$user->blocked_at])
+        -else
+            %td
+                != Yii::t('user', 'Not blocked')
+
+-$view->endContent()

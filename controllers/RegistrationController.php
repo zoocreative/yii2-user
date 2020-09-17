@@ -20,6 +20,7 @@ use zoocreative\user\traits\EventTrait;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use app\models\Meta;
 
 /**
  * RegistrationController is responsible for all registration process, which includes registration of a new account,
@@ -121,6 +122,8 @@ class RegistrationController extends Controller
      */
     public function actionRegister()
     {
+        Meta::tags($this, "inner");
+
         if (!$this->module->enableRegistration) {
             throw new NotFoundHttpException();
         }
@@ -142,7 +145,7 @@ class RegistrationController extends Controller
             ]);
         }
 
-        return $this->render('register', [
+        return $this->render('register.haml', [
             'model'  => $model,
             'module' => $this->module,
         ]);

@@ -1,0 +1,16 @@
+-use yii\helpers\Html;
+-use yii\widgets\ActiveForm;
+
+.grid-container
+    .grid-x.grid-margin-x
+        .auto.cell
+            -$form = ActiveForm::begin(['id' => 'registration-form','enableAjaxValidation' => true,'enableClientValidation' => false,]);
+            != $form->field($model, 'email')
+            != $form->field($model, 'username')
+            -if ($module->enableGeneratingPassword == false)
+                != $form->field($model, 'password')->passwordInput()
+            != Html::submitButton(Yii::t('user', 'Sign up'), ['class' => 'btn btn-success btn-block'])
+            -ActiveForm::end();
+        .auto.cell
+            %p(class="text-center")
+                != Html::a(Yii::t('user', 'Already registered? Sign in!'), ['/user/security/login'])

@@ -1,0 +1,20 @@
+-use yii\helpers\Html;
+
+.grid-container
+    .grid-x.grid-margin-x
+        .shrink.cell
+            != Html::img($profile->getAvatarUrl(230), ['class' => 'img-rounded img-responsive','alt' => $profile->user->username,])
+        .auto.cell
+            %ul
+                -if (!empty($profile->location))
+                    %li
+                        != Html::encode($profile->location)
+                -if (!empty($profile->website))
+                    %li
+                        != Html::a(Html::encode($profile->website), Html::encode($profile->website))
+                -if (!empty($profile->public_email))
+                    %li
+                        != Html::a(Html::encode($profile->public_email), 'mailto:' . Html::encode($profile->public_email))
+            -if (!empty($profile->bio))
+                %p
+                    != Html::encode($profile->bio)

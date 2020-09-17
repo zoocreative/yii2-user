@@ -23,6 +23,7 @@ use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
+use app\models\Meta;
 
 /**
  * SettingsController manages updating user settings (e.g. profile, email and password).
@@ -150,6 +151,8 @@ class SettingsController extends Controller
      */
     public function actionProfile()
     {
+        Meta::tags($this, "inner");
+
         $model = $this->finder->findProfileById(\Yii::$app->user->identity->getId());
 
         if ($model == null) {
@@ -168,7 +171,7 @@ class SettingsController extends Controller
             return $this->refresh();
         }
 
-        return $this->render('profile', [
+        return $this->render('profile.haml', [
             'model' => $model,
         ]);
     }
@@ -180,6 +183,8 @@ class SettingsController extends Controller
      */
     public function actionAccount()
     {
+        Meta::tags($this, "inner");
+
         /** @var SettingsForm $model */
         $model = \Yii::createObject(SettingsForm::className());
         $event = $this->getFormEvent($model);
@@ -193,7 +198,7 @@ class SettingsController extends Controller
             return $this->refresh();
         }
 
-        return $this->render('account', [
+        return $this->render('account.haml', [
             'model' => $model,
         ]);
     }
@@ -231,7 +236,9 @@ class SettingsController extends Controller
      */
     public function actionNetworks()
     {
-        return $this->render('networks', [
+        Meta::tags($this, "inner");
+
+        return $this->render('networks.haml', [
             'user' => \Yii::$app->user->identity,
         ]);
     }
