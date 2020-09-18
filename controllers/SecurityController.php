@@ -18,7 +18,6 @@ use zoocreative\user\models\User;
 use zoocreative\user\Module;
 use zoocreative\user\traits\AjaxValidationTrait;
 use zoocreative\user\traits\EventTrait;
-use app\models\Meta;
 use yii\authclient\AuthAction;
 use yii\authclient\ClientInterface;
 use yii\filters\AccessControl;
@@ -145,8 +144,6 @@ class SecurityController extends Controller
      */
     public function actionLogin()
     {
-        Meta::tags($this, "inner");
-
         if (!\Yii::$app->user->isGuest) {
             $this->goHome();
         }
