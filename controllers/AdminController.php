@@ -206,7 +206,7 @@ class AdminController extends Controller
         $searchModel  = \Yii::createObject(UserSearch::className());
         $dataProvider = $searchModel->search(\Yii::$app->request->get());
 
-        return $this->render('index', [
+        return $this->render('index.haml', [
             'dataProvider' => $dataProvider,
             'searchModel'  => $searchModel,
         ]);
@@ -236,7 +236,7 @@ class AdminController extends Controller
             return $this->redirect(['update', 'id' => $user->id]);
         }
 
-        return $this->render('create', [
+        return $this->render('create.haml', [
             'user' => $user,
         ]);
     }
@@ -264,7 +264,7 @@ class AdminController extends Controller
             return $this->refresh();
         }
 
-        return $this->render('_account', [
+        return $this->render('_account.haml', [
             'user' => $user,
         ]);
     }
@@ -298,7 +298,7 @@ class AdminController extends Controller
             return $this->refresh();
         }
 
-        return $this->render('_profile', [
+        return $this->render('_profile.haml', [
             'user'    => $user,
             'profile' => $profile,
         ]);
@@ -316,7 +316,7 @@ class AdminController extends Controller
         Url::remember('', 'actions-redirect');
         $user = $this->findModel($id);
 
-        return $this->render('_info', [
+        return $this->render('_info.haml', [
             'user' => $user,
         ]);
     }
@@ -377,7 +377,7 @@ class AdminController extends Controller
         Url::remember('', 'actions-redirect');
         $user = $this->findModel($id);
 
-        return $this->render('_assignments', [
+        return $this->render('_assignments.haml', [
             'user' => $user,
         ]);
     }

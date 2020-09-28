@@ -1,14 +1,14 @@
 -use yii\bootstrap\ActiveForm;
 -use yii\helpers\Html;
 
--$view->beginContent('@zoocreative/user/views/admin/update.php', ['user' => $user]) ?>
+-$view->beginContent('@zoocreative/user/views/admin/update.haml', ['user' => $user])
 
 -$form = ActiveForm::begin(['layout' => 'horizontal','enableAjaxValidation' => true,'enableClientValidation' => false,'fieldConfig' => ['horizontalCssClasses' => ['wrapper' => 'col-sm-9',],],])
 
-!=$this->render('_user', ['form' => $form, 'user' => $user])
+!=$view->render('_user', ['form' => $form, 'user' => $user])
 
 .form-group
-    != Html::submitButton(Yii::t('user', 'Update'), ['class' => 'btn btn-block btn-success']) ?>
+    != Html::submitButton(Yii::t('user', 'Update'), ['class' => 'button'])
 -ActiveForm::end()
 
--$this->endContent()
+-$view->endContent()
