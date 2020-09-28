@@ -1,11 +1,14 @@
 -use yii\helpers\Html;
 -use yii\widgets\ActiveForm;
 
+-$view->params['title'] = "Request Password";
+-$view->params['class'] = "inner";
+
 .grid-container
     .grid-x.grid-margin-x
-                -$form = ActiveForm::begin(['id' => 'password-recovery-form','enableAjaxValidation' => true,'enableClientValidation' => false]);
-                != $form->field($model, 'email')->textInput(['autofocus' => true])
+        -$form = ActiveForm::begin(['id' => 'password-recovery-form','enableAjaxValidation' => true,'enableClientValidation' => false]);
+        != $form->field($model, 'email')->textInput(['autofocus' => true])
 
-                != Html::submitButton(Yii::t('user', 'Continue'), ['class' => 'btn btn-primary btn-block'])
+        != Html::submitButton(Yii::t('user', 'Continue'), ['class' => 'btn btn-primary btn-block'])
 
-                -ActiveForm::end();
+        -ActiveForm::end();

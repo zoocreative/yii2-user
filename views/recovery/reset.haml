@@ -1,6 +1,9 @@
 -use yii\helpers\Html;
 -use yii\widgets\ActiveForm;
 
+-$view->params['title'] = "Reset Password";
+-$view->params['class'] = "inner";
+
 .grid-container
     .grid-x.grid-margin-x
         -$form = ActiveForm::begin(['id' => 'password-recovery-form','enableAjaxValidation' => true,'enableClientValidation' => false]);

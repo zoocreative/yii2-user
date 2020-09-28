@@ -4,6 +4,9 @@
 -use yii\web\View;
 -use yii\widgets\Pjax;
 
+-$view->params['title'] = "User Administration";
+-$view->params['class'] = "inner";
+
 != $view->render('/_alert', ['module' => Yii::$app->getModule('user')])
 
 != $view->render('/admin/_menu.haml')

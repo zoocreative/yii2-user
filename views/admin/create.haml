@@ -2,6 +2,9 @@
 -use yii\bootstrap\Nav;
 -use yii\helpers\Html;
 
+-$view->params['title'] = "Admin - Create User";
+-$view->params['class'] = "inner";
+
 != $view->render('/_alert', ['module' => Yii::$app->getModule('user'),])
 
 != $this->render('_menu.haml')

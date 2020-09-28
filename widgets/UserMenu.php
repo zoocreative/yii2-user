@@ -12,6 +12,7 @@
 namespace zoocreative\user\widgets;
 
 use yii\widgets\Menu;
+use yii\bootstrap\Nav;
 use Yii;
 use yii\base\Widget;
 
@@ -34,6 +35,11 @@ class UserMenu extends Widget
                 ['label' => Yii::t('user', 'Profile'), 'url' => ['/user/settings/profile']],
                 ['label' => Yii::t('user', 'Account'), 'url' => ['/user/settings/account']],
                 [
+                    'label' => Yii::t('user', 'Logout'), 
+                    'url' => ['/user/security/logout'], 
+                    'linkOptions' => ['data-pjax'=>'0', 'data-method'=>'post']
+                ],
+                [
                     'label' => Yii::t('user', 'Networks'),
                     'url' => ['/user/settings/networks'],
                     'visible' => $networksVisible
@@ -46,9 +52,9 @@ class UserMenu extends Widget
      */
     public function run()
     {
-        return Menu::widget([
+        return Nav::widget([
             'options' => [
-                'class' => 'nav nav-pills nav-stacked',
+                'class' => 'vertical menu',
             ],
             'items' => $this->items,
         ]);

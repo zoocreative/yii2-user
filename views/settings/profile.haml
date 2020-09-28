@@ -3,6 +3,9 @@
 -use yii\widgets\ActiveForm;
 -use yii\helpers\ArrayHelper;
 
+-$view->params['title'] = "Update Profile";
+-$view->params['class'] = "inner";
+
 != $view->render('/_alert', ['module' => Yii::$app->getModule('user')])
 
 .grid-container

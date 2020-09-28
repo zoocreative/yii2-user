@@ -3,6 +3,9 @@
 -use yii\helpers\Html;
 -use yii\widgets\ActiveForm;
 
+-$view->params['title'] = "Login";
+-$view->params['class'] = "inner";
+
 !=$view->render('/_alert', ['module' => Yii::$app->getModule('user')]);
 
 .grid-container

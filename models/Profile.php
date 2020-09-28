@@ -86,7 +86,7 @@ class Profile extends ActiveRecord
     {
         return [
             'name'           => \Yii::t('user', 'Name'),
-            'public_email'   => \Yii::t('user', 'Email (public)'),
+            'public_email'   => \Yii::t('user', 'Email'),
             'gravatar_email' => \Yii::t('user', 'Gravatar email'),
             'location'       => \Yii::t('user', 'Location'),
             'website'        => \Yii::t('user', 'Website'),

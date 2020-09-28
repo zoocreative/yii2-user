@@ -1,5 +1,8 @@
 -use yii\bootstrap\Nav;
 
+-$view->params['title'] = "Admin - Update User";
+-$view->params['class'] = "inner";
+
 != $view->render('/_alert', ['module' => Yii::$app->getModule('user')])
 
 != $view->render('_menu.haml') ?>

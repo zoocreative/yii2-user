@@ -126,7 +126,7 @@ class RecoveryController extends Controller
             ]);
         }
 
-        return $this->render('request', [
+        return $this->render('request.haml', [
             'model' => $model,
         ]);
     }
